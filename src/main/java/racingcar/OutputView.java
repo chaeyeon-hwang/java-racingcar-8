@@ -1,5 +1,7 @@
 package racingcar;
 
+import java.util.List;
+
 public class OutputView {
     private static final String EXECUTION_RESULT_MESSAGE = "\n실행 결과";
     private static final String WINNER_MESSAGE_PREFIX = "최종 우승자 : ";

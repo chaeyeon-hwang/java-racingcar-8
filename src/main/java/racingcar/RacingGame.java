@@ -1,7 +1,8 @@
 package racingcar;
 
 import camp.nextstep.edu.missionutils.Randoms;
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
 
 public class RacingGame {
     public static final int MIN_MOVE_VALUE = 4;
@@ -26,11 +27,8 @@ public class RacingGame {
     }
 
     private List<Car> prepareCars(){
-        List<Car> cars = new ArrayList<>();
-        for (String name : names) {
-            cars.add(new Car(name));
-        }
-        return cars;
+        List<String> names = InputView.inputCarNames();
+        return createCars(names);
     }
     private void moveCars(List<Car> cars){
         for (Car car : cars) {
